@@ -33,11 +33,11 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="allPosts">Accueil</a></li>
-                        <li><a href="hashtag/Alternance">Sport</a></li>
-                        <li><a href="hashtag/OCR">Sante</a></li>
-                        <li><a href="hashtag/Dev">Education</a></li>
-                        <li><a href="hashtag/Dev">Politique</a></li>
+                        <li><a href="">Accueil</a></li>
+                        <li><a href="">Sport</a></li>
+                        <li><a href="">Sante</a></li>
+                        <li><a href="">Education</a></li>
+                        <li><a href="">Politique</a></li>
                     </ul>
                 </div>
             </nav>
@@ -45,12 +45,10 @@
 
         <section>
             <div class="container">
-                <article  class="row text-center">
-                
-
-                </article>
+                <div  class="row text-center">
+                    <?= $content ?>
+                </div>
             </div>
-
         </section>
     </div>
     <!-- CDN JQuery -->

@@ -6,12 +6,13 @@ class ArticleController
 
     public function home()
     {
-        require_once('Model/Manager.php');
+        require_once('Model/ArticleManager.php');
 
-    $run = new \App\Model\Manager();
-    $test = $run->dbConnect();
+    $run = new \App\Model\ArticleManager();
+    $test = $run->getArticles();
+        
     if ($test) {
-        require('View/template.php');   
+        require('View/home.php');   
         # code...
     }
     }
