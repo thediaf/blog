@@ -1,20 +1,24 @@
 <?php
 namespace App\Controller;
 
+require_once('Model/ArticleManager.php');
+
 class ArticleController 
 {
+    protected $model;
+    public function __construct()
+    {
+        $this->model = new \App\Model\ArticleManager();
+    }
 
     public function home()
     {
-        require_once('Model/ArticleManager.php');
-
-    $run = new \App\Model\ArticleManager();
-    $test = $run->getArticles();
-        
-    if ($test) {
-        require('View/home.php');   
-        # code...
-    }
+        $articles = $this->model->getArticles();
+            
+        if ($articles) {
+            require('View/home.php');   
+            # code...
+        }
     }
 
 }

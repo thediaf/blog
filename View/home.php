@@ -1,5 +1,5 @@
 <?php ob_start() ?> 
-<?php foreach ($test as $article) { ?> 
+<?php foreach ($articles as $article) { ?> 
     <div class="col-md-offset-1 col-md-10">
         <article class="">
             <h2>
