@@ -24,4 +24,15 @@ class ArticleManager extends Manager
 
     }
 
+    public function getArticle($id)
+    {
+
+        $sql = 'SELECT id, title, content, created_at FROM article WHERE id = ? ORDER BY id DESC';
+        $query =  $this->connexion->prepare($sql);
+        $query->execute(array($id));
+
+        return $query->fetch();
+
+    }
+
 }

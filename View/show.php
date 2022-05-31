@@ -1,9 +1,8 @@
 <?php ob_start() ?> 
-<?php foreach ($articles as $article) { ?> 
     <div class="col-md-offset-1 col-md-10">
         <article class="">
             <h2>
-                <a href="show/<?= htmlspecialchars($article['id']);?>" class="chapter">
+                <a href="../public/index.php?route=article&idArt=<?= htmlspecialchars($article['id']);?>" class="chapter">
                     <?= htmlspecialchars($article['title']);?>
                 </a>
             </h2>
@@ -16,7 +15,6 @@
             </p>
         </article>
     </div>
-<?php } ?>
 
 
 <?php $content = ob_get_clean(); ?>
