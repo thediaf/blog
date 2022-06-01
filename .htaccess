@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteRule ^show/([0-9]+)$ index.php?action=show&id=$1
+
+
+
+

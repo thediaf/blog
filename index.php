@@ -3,4 +3,17 @@
     require_once('Controller/ArticleController.php');
 
     $run = new \App\Controller\ArticleController();
-    $run->home();
+    
+    try {
+        if(isset($_GET['action']))
+        {
+            if ($_GET['action'] == "show")
+            {
+                $run->show($_GET['id']);
+            }
+        }
+        else
+        $run->home();
+    } catch (\Throwable $th) {
+        //throw $th;
+    }

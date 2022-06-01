@@ -3,7 +3,7 @@
     <div class="col-md-offset-1 col-md-10">
         <article class="">
             <h2>
-                <a href="show/<?= htmlspecialchars($article['id']);?>" class="chapter">
+                <a href="../index.php?action=show&id=<?= htmlspecialchars($article['id']);?>" class="">
                     <?= htmlspecialchars($article['title']);?>
                 </a>
             </h2>

@@ -24,7 +24,7 @@ class ArticleController
     public function show($id)
     {
         $article = $this->model->getArticle($id);
-        echo var_dump($article);
+        var_dump($article);
         require('View/show.php');
     }
 
