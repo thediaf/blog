@@ -33,11 +33,14 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="">Accueil</a></li>
-                        <li><a href="">Sport</a></li>
-                        <li><a href="">Sante</a></li>
-                        <li><a href="">Education</a></li>
-                        <li><a href="">Politique</a></li>
+                        <li><a href="/">Accueil</a></li>
+                        <?php foreach ($categories as $category) { ?>
+                            <li>
+                                <a href="../index.php?action=category&id=<?= htmlspecialchars($category['id']);?>">
+                                    <?= htmlspecialchars($category['title']);?> 
+                                </a>
+                            </li>
+                        <?php  } ?>
                     </ul>
                 </div>
             </nav>

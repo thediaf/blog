@@ -11,6 +11,11 @@
             {
                 $run->show($_GET['id']);
             }
+            elseif ($_GET['action'] == "category")
+            {
+                
+                $run->categoryArticles($_GET['id']);
+            }
         }
         else
         $run->home();

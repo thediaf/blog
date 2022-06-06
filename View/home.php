@@ -4,7 +4,7 @@
         <article class="">
             <h2>
                 <a href="../index.php?action=show&id=<?= htmlspecialchars($article['id']);?>" class="">
-                    <?= htmlspecialchars($article['title']);?>
+                    <?= $article['title'];?>
                 </a>
             </h2>
             <p>
