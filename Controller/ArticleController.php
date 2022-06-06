@@ -1,24 +1,24 @@
 <?php
 namespace App\Controller;
 
-use App\Model\ArticleManager;
-use App\Model\CategoryManager;
+use App\Model\ArticleModel;
+use App\Model\CategoryModel;
 
-require_once('Model/ArticleManager.php');
+require_once('Model/ArticleModel.php');
 
 class ArticleController 
 {
     protected $model;
     public function __construct()
     {
-        $this->model = new ArticleManager();
+        $this->model = new ArticleModel();
     }
 
     public function home()
     {
         $articles = $this->model->getArticles();
         $categories = $this->model->getCategories();
-        // $categories = new CategoryManager();
+        // $categories = new CategoryModel();
         // var_dump($categories);
             
         if ($articles) {

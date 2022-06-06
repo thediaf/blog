@@ -5,7 +5,7 @@ require_once('Model/Manager.php');
 
 use App\Model\Manager;
 
-class CategoryManager extends Manager
+class CategoryModel extends Manager
 {
     protected $connexion;
 

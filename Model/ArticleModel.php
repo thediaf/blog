@@ -5,7 +5,7 @@ require_once('Model/Manager.php');
 
 use App\Model\Manager;
 
-class ArticleManager extends Manager
+class ArticleModel extends Manager
 {
     protected $connexion;
 
